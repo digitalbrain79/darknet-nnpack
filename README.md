@@ -27,9 +27,9 @@ cd NNPACK-darknet
 confu setup
 python ./configure.py --backend auto
 $NINJA_PATH/ninja
-sudo cp -a lib/* /usr/lib/
-sudo cp include/nnpack.h /usr/include/
-sudo cp deps/pthreadpool/include/pthreadpool.h /usr/include/
+sudo cp -a lib/* /usr/local/lib/
+sudo cp include/nnpack.h /usr/local/include/
+sudo cp deps/pthreadpool/include/pthreadpool.h /usr/local/include/
 ```
 Build darknet-nnpack
 ```
