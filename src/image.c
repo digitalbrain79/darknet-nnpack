@@ -181,21 +181,25 @@ void draw_box(image a, int x1, int y1, int x2, int y2, float r, float g, float b
         a.data[i + y1*a.w + 0*a.w*a.h] = r;
         a.data[i + y2*a.w + 0*a.w*a.h] = r;
 
-        a.data[i + y1*a.w + 1*a.w*a.h] = g;
-        a.data[i + y2*a.w + 1*a.w*a.h] = g;
+        if (a.c > 1) {
+            a.data[i + y1*a.w + 1*a.w*a.h] = g;
+            a.data[i + y2*a.w + 1*a.w*a.h] = g;
 
-        a.data[i + y1*a.w + 2*a.w*a.h] = b;
-        a.data[i + y2*a.w + 2*a.w*a.h] = b;
+            a.data[i + y1*a.w + 2*a.w*a.h] = b;
+            a.data[i + y2*a.w + 2*a.w*a.h] = b;
+        }
     }
     for(i = y1; i <= y2; ++i){
         a.data[x1 + i*a.w + 0*a.w*a.h] = r;
         a.data[x2 + i*a.w + 0*a.w*a.h] = r;
 
-        a.data[x1 + i*a.w + 1*a.w*a.h] = g;
-        a.data[x2 + i*a.w + 1*a.w*a.h] = g;
+        if (a.c > 1) {
+            a.data[x1 + i*a.w + 1*a.w*a.h] = g;
+            a.data[x2 + i*a.w + 1*a.w*a.h] = g;
 
-        a.data[x1 + i*a.w + 2*a.w*a.h] = b;
-        a.data[x2 + i*a.w + 2*a.w*a.h] = b;
+            a.data[x1 + i*a.w + 2*a.w*a.h] = b;
+            a.data[x2 + i*a.w + 2*a.w*a.h] = b;
+        }
     }
 }
 
